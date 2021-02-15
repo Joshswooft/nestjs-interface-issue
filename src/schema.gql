@@ -1,0 +1,32 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type AddressDto implements IAddress {
+  city: String!
+  countryCode: String!
+  line1: String!
+  line2: String
+  postCode: String!
+  state: String!
+}
+
+interface IAddress {
+  city: String!
+  countryCode: String!
+  line1: String!
+  line2: String
+  postCode: String!
+  state: String!
+}
+
+type Query {
+  store(id: Int!): Store!
+}
+
+type Store {
+  address: AddressDto!
+  id: Int!
+  name: String!
+  slug: String!
+}
