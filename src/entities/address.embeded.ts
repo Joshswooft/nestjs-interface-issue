@@ -1,6 +1,6 @@
 import { Column } from 'typeorm';
 
-interface Address {
+export interface IAddress {
   line1: string;
 
   line2?: string;
@@ -14,7 +14,7 @@ interface Address {
   postCode: string;
 }
 
-export class AddressEmbedded implements Address {
+export class AddressEmbedded implements IAddress {
   @Column()
   line1: string;
 

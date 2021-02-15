@@ -1,5 +1,5 @@
 import { Field, Int, ObjectType } from '@nestjs/graphql';
-import { AddressDto } from './address.dto';
+import { ShippingAddress } from './shipping-address.dto';
 
 @ObjectType('Store')
 export class StoreDto {
@@ -13,5 +13,5 @@ export class StoreDto {
   name: string;
 
   @Field()
-  address: AddressDto;
+  shippingAddress: ShippingAddress;
 }

@@ -1,5 +1,5 @@
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
-import { AddressEmbedded } from './address.embeded';
+import { ShippingAddressEmbedded } from './shipping-address.embedded';
 
 @Entity('stores')
 export class StoreEntity {
@@ -12,6 +12,6 @@ export class StoreEntity {
   @Column({ unique: true })
   slug: string;
 
-  @Column(() => AddressEmbedded)
-  address: AddressEmbedded;
+  @Column(() => ShippingAddressEmbedded)
+  shippingAddress: ShippingAddressEmbedded;
 }
